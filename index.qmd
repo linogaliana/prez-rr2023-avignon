@@ -1,0 +1,106 @@
+---
+title: Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques
+subtitle: |
+  **[De la qualité d'un projet aux pipelines de données]{.orange}**
+author: |
+  [Lino Galiana](https://www.linogaliana.fr/),
+# date: 
+slide-number: true
+footer: |
+  Rencontres R 2023
+# uncomment for French presentations:
+lang: fr-FR
+# for blind readers:
+slide-tone: false
+# for @olevitt:
+chalkboard: # press the B key to toggle chalkboard
+  theme: whiteboard
+# uncomment to use the multiplex mode:
+#multiplex: true
+format:
+  # pick the light mode (onyxia-revealjs) or the dark mode (onyxia-dark-revealjs)
+  onyxia-revealjs:
+  #onyxia-dark-revealjs:
+    output-file: index.html
+controls: true
+css: custom.css
+from: markdown+emoji
+---
+
+## Introduction
+
+* Version longue de la formation
+aux bonnes pratiques avec `R` et `Git`
+
+![](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/cards/version-full/eagle.png){fig-align="center"}
+
+[_Retour à la page d'accueil pour explorer les autres versions_](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/)
+
+
+
+# Introduction
+
+{{< include _intro.qmd >}}
+
+# Partie 1 : contrôle de version avec `Git`
+
+## Plan de la partie
+
+:one: Le [**contrôle de version**]{.orange} : pourquoi faire ?
+
+. . .
+
+:two: Le [**contrôle de version**]{.orange} avec `Git`
+
+. . .
+
+:three: Le [**travail collaboratif**]{.orange} avec `Git`
+
+{{< include _git_fundamentals.qmd >}}
+
+{{< include _git_collab.qmd >}}
+
+{{< include _git_resources.qmd >}}
+
+
+
+# Partie 2 : bonnes pratiques avec `R`
+
+## Plan de la partie
+
+Améliorations graduelles dans l'échelle de la reproductibilité :
+
+:one: Qualité du code
+
+. . .
+
+:two: Structure des projets
+
+. . .
+
+:three: Formats de données
+
+. . .
+
+:four: Environnements reproductibles
+
+. . .
+
+:five: *Pipelines* de données
+
+. . .
+
+:six: Publication reproductible
+
+{{< include _r_fundamentals.qmd >}}
+
+{{< include _r_advanced.qmd >}}
+
+{{< include _r_resources.qmd >}}
+
+
+
+
+# Conclusion
+
+{{< include _conclusion.qmd >}}
