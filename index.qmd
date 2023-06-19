@@ -99,7 +99,9 @@ Une transition réussie à `R` nécessite de se préoccuper de la __qualité__ d
 
 ## Sommaire
 
-1. Objectifs pédagogiques
+- :one: Objectifs pédagogiques
+- :two: Contenu du parcours
+- :three: Retour d'expérience
 
 # :one: Objectifs pédagogiques
 
@@ -114,6 +116,10 @@ Une transition réussie à `R` nécessite de se préoccuper de la __qualité__ d
 
 - La __[maintenance]{.orange}__ d'un code est très coûteuse
 
+. . .
+
+- Traitements statistiques se doivent d'être __[transparents]{.orange}__ et  __[reproductibles]{.orange}__
+
 :::{.callout-note}
 ## Définition des bonnes pratiques
 
@@ -125,9 +131,15 @@ conventionnellement acceptées comme produisant des projets [**fiables**]{.orang
 
 ## Enjeux (2/2) {.smaller}
 
+<br>
+
 - Mais ⚠️ __une reproductibilité parfaite est [**coûteuse**]{.orange}__
 
+. . .
+
 - `Git` est un [**standard atteignable**]{.orange} et [**efficient**]{.orange}
+
+. . .
 
 - Un __socle minimal__ est attendu pour tout projet {{< fa brands r-project >}}
     + Puis un curseur à placer plus loin en fonction des projets
@@ -156,22 +168,20 @@ car le _package_ n'est pas pertinent pour tout.
     + Pourquoi faire du contrôle de version et organiser le code par projets ?
     + Normes minimales de sécurité
 
-## Approche pédagogique
+## Approche pédagogique {.smaller}
+
+<br>
 
 - Un exemple fil rouge pour les applications
- 
-. . .
- 
-- Cas classique: on hérite d'un code avec de nombreuses mauvaises pratiques
+    + Cas classique: on hérite d'un code avec de nombreuses mauvaises pratiques
 
 . . .
 
 - Amélioration graduelle de la qualité du projet 
-
-## Exemple
+    + Après l'avoir rendu fonctionnel, on l'améliore progressivement
 
 :::{.callout-tip collapse="true" icon=false}
-## Partie 1 : modularisation du projet
+## Exemple : exercice modularisation du projet
 
 1. Déplacer toutes les fonctions dans un fichier `R/functions.R`.
 2. Donner à la fonction `fonction_de_stat_agregee` un nom plus pertinent et des noms d'arguments plus transparents.
@@ -199,36 +209,83 @@ car le _package_ n'est pas pertinent pour tout.
 :::
 
 
-# :two: Contenu 
+# :two: Contenu du parcours
 
-## Le socle minimal 
+## Le socle minimal (formation 1 jour) {.smaller}
 
-- Concepts et pratique de `Git` & `Gitlab` sans l'aspect
+- [Concepts]{.blue2} et [pratique]{.blue2} de __[Git & Gitlab]{.orange}__ sans l'aspect
 collaboratif
 
 . . .
 
-- Qualité du script:
-    + _linter_ et _formaters_
-    + Privilégier l'autodocumentation du code
-    + Modulariser son code avec des fonctions
+- __[Qualité du script]{.orange}__:
+    + Nettoyer le code: [_linter_]{.blue2} et [_formaters_]{.blue2}
+    + Privilégier l'[autodocumentation]{.blue2} du code
+    + [Modulariser]{.blue2} son code avec des fonctions
 
 . . .
 
-- Structure des projets:
-    - Auto-documentatoin dans la structure de projet
+- __[Structure des projets]{.orange}__:
+    - Auto-documentation dans la structure de projet
     - Comprendre spéaration stoxckage code & données
+
+
+## Eléments plus avancés (formation 2 jours) {.smaller}
+
+<br>
+
+- __[Travail collaboratif]{.orange}__ avec `Git` & `Gitlab`: _branches_, _pull request_...
+
+. . .
+
+- __[Environnements reproductibles]{.orange}__: `renv`
+
+. . .
+
+- __[*Pipelines*]{.orange}__ de données avec `targets`
+
+. . .
+
+- __[Publications reproductibles]{.orange}__ avec `Quarto`
+
+
+## Une approche complémentaire pour les manageurs
+
+<br>
+
+- Formation pour sensibiliser les manageurs au sujet
+
+. . .
+
+- Conseils sur l'utilisation de ces outils pour de la supervision
+
+. . .
+
+- Convaincre que cette exigeance est aussi nécessaire pour les _manageurs_
 
 
 # :three: Retour d'expérience
 
 ## Concernant `Git`
 
-- pas mal d'expérience de formation sur `git`, commence 
-à avoir du recul
-- aspect collaboratif plus compliqué mais pas nécessaire à tous
+- Beaucoup de formations depuis 3 ans à `Git`: 
+    + Bonne communauté d'utilisateurs à l'INSEE pour aider
+    + Ressources complémentaires depuis longtemps dans [`utilitR`](https://www.book.utilitr.org/)
+
+. . .
+
+- Formation massive à `Git` collaboratif viendra plus tard
+    + Besoin avant tout que tout le monde utilise systématiquement `Git`
 
 ## Concernant `R`
 
-- `renv` : beaucoup persuadés de l'intérêt
-- `targets` : 
+- Pragmatisme dans le programme choisi
+
+. . .
+
+- Priorité: comprendre la logique `R` différente de celle de `SAS`
+
+. . .
+
+- D'autres éléments (`renv`, `targets`...) sont plus de l'ordre
+de l'horizon vers lequel on veut converger
