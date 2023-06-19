@@ -23,84 +23,212 @@ format:
   #onyxia-dark-revealjs:
     output-file: index.html
 controls: true
-css: custom.css
+css: styles.css
 from: markdown+emoji
 ---
 
-## Introduction
-
-* Version longue de la formation
-aux bonnes pratiques avec `R` et `Git`
-
-![](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/cards/version-full/eagle.png){fig-align="center"}
-
-[_Retour à la page d'accueil pour explorer les autres versions_](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/)
-
-
-
 # Introduction
 
-{{< include _intro.qmd >}}
+## Contexte {.smaller}
 
-# Partie 1 : contrôle de version avec `Git`
 
-## Plan de la partie
+<br>
 
-:one: Le [**contrôle de version**]{.orange} : pourquoi faire ?
-
-. . .
-
-:two: Le [**contrôle de version**]{.orange} avec `Git`
+* L'INSEE se désengage de son patrimoine en
+`SAS` depuis plusieurs années
 
 . . .
 
-:three: Le [**travail collaboratif**]{.orange} avec `Git`
-
-{{< include _git_fundamentals.qmd >}}
-
-{{< include _git_collab.qmd >}}
-
-{{< include _git_resources.qmd >}}
-
-
-
-# Partie 2 : bonnes pratiques avec `R`
-
-## Plan de la partie
-
-Améliorations graduelles dans l'échelle de la reproductibilité :
-
-:one: Qualité du code
+* Volonté institutionnelle d'utiliser `Git` {{< fa brands git-alt >}} pour
+les projets statistiques
 
 . . .
 
-:two: Structure des projets
+* Beaucoup de formations internes d'introduction à {{< fa brands r-project >}}
+
+<br>
+
+::: {.callout-important}
+
+Une transition réussie à `R` nécessite de se préoccuper de la __qualité__ du code produit :
+
+- Besoin de __[formations]{.orange}__ à tous les niveaux
+- Besoin d'accompagnement
+
+:::
+
+## Enjeux {.smaller}
+
+<br>
+
+- __[Faible sensibilisation]{.orange}__ à la question de la [__qualité__]{.blue2} du code :
+    + lors de la formation initiale ;
+    - lors des formations d'initiation à {{< fa brands r-project >}} ou {{< fa brands python >}}
+
+. . . 
+
+- Risque de créer de la dette technique sans une __[transition contrôlée]{.orange}__
+
+. . . 
+
+- __[Besoins et niveaux très hétérogènes]{.orange}__ dans l'institut:
+    + Transition parfois difficile de `SAS` à `R` ;
+    + Pas les mêmes besoins selon les niveaux hiérarchiques.
+
+
+## Pourquoi former aux bonnes pratiques ? {.smaller}
+
+<br>
+
+- Il est utile de [__former__]{.orange} aux bonnes pratiques:
+    + Temps investi faible par rapport à de l'apprentissage sur le tas ;
+    + Pour des gains sensibles de qualité 
 
 . . .
 
-:three: Formats de données
+- Il est utile de [__sensibiliser__]{.orange} aux bonnes pratiques à tous les niveaux :
+    + Effets de mimétisme ;
+    + Communauté interne utile pour debugger... 
+
+
+## Un point d'accès centralisé {.smaller}
+
+- Tout est sur [inseefrlab.github.io/formation-bonnes-pratiques-git-R](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/)
+
+![](img/bp_homepage.png){fig-align="center"}
+
+## Sommaire
+
+1. Objectifs pédagogiques
+
+# :one: Objectifs pédagogiques
+
+## Enjeux (1/2) {.smaller}
+
+<br><br>
+
+- [__Abandonner la vision utilitariste__]{.orange} du code:
+    + Code est un moyen de communication: le [_"code est plus souvent lu qu'écrit"_]{.blue2} ([Guido Van Rossum](https://fr.wikipedia.org/wiki/Guido_van_Rossum))
 
 . . .
 
-:four: Environnements reproductibles
+- La __[maintenance]{.orange}__ d'un code est très coûteuse
+
+:::{.callout-note}
+## Définition des bonnes pratiques
+
+Un ensemble de [**règles informelles**]{.orange},
+conventionnellement acceptées comme produisant des projets [**fiables**]{.orange}, [**évolutifs**]{.orange} et [**maintenables**]{.orange}
+:::
+
+
+
+## Enjeux (2/2) {.smaller}
+
+- Mais ⚠️ __une reproductibilité parfaite est [**coûteuse**]{.orange}__
+
+- `Git` est un [**standard atteignable**]{.orange} et [**efficient**]{.orange}
+
+- Un __socle minimal__ est attendu pour tout projet {{< fa brands r-project >}}
+    + Puis un curseur à placer plus loin en fonction des projets
+
+:::{.callout-note}
+
+Par exemple, on insiste plutôt sur la __modularisation__ que la _packagisation_
+car le _package_ n'est pas pertinent pour tout.
+:::
+
+
+## Des versions différentes selon le public {.smaller}
+
+- __Socle minimal__ (1 jour de formation)
+    + Git
+    + Qualité des scripts
+    + Structure des projets
+
+- __Version approfondie__ (2 jours):
+    + Socle minimal
+    + Environnements reproductibles (`renv`)
+    + Introduction aux pipelines (`targets`)
+    + Initiation à `Quarto`
+
+- __Version manageurs__ (1/2 journée):
+    + Pourquoi faire du contrôle de version et organiser le code par projets ?
+    + Normes minimales de sécurité
+
+## Approche pédagogique
+
+- Un exemple fil rouge pour les applications
+ 
+. . .
+ 
+- Cas classique: on hérite d'un code avec de nombreuses mauvaises pratiques
 
 . . .
 
-:five: *Pipelines* de données
+- Amélioration graduelle de la qualité du projet 
+
+## Exemple
+
+:::{.callout-tip collapse="true" icon=false}
+## Partie 1 : modularisation du projet
+
+1. Déplacer toutes les fonctions dans un fichier `R/functions.R`.
+2. Donner à la fonction `fonction_de_stat_agregee` un nom plus pertinent et des noms d'arguments plus transparents.
+3. Dans `script.R`, appeler en début de chaîne ces fonctions avec `source("R/functions.R", encoding = "UTF-8")`.
+4. Documenter la fonction principale au [format attendu](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html) par `roxygen2`.
+5. Ajouter les tests unitaires de la fonction comme exemples d'utilisation et les retirer de `script.R`.
+6. Tester le bon fonctionnement de `script.R`.
+
+:::
+
+## Exemple (suite)
+
+- Un système de _checkpoint_ pour permettre à chacun d'aller à son rythme
+
+::: {layout=[30,70]}
+
+- [script.R](https://raw.githubusercontent.com/InseeFrLab/formation-bonnes-pratiques-R/main/R/checkpoints/application2/script.R)
+
+- [functions.R](https://raw.githubusercontent.com/InseeFrLab/formation-bonnes-pratiques-R/main/R/checkpoints/application2/functions.R)
+
+- [Package R](https://github.com/InseeFrLab/formation-bonnes-pratiques-R/tree/main/package)
+
+
+![](slides/checkpoint.jpg){width=60%}
+:::
+
+
+# :two: Contenu 
+
+## Le socle minimal 
+
+- Concepts et pratique de `Git` & `Gitlab` sans l'aspect
+collaboratif
 
 . . .
 
-:six: Publication reproductible
+- Qualité du script:
+    + _linter_ et _formaters_
+    + Privilégier l'autodocumentation du code
+    + Modulariser son code avec des fonctions
 
-{{< include _r_fundamentals.qmd >}}
+. . .
 
-{{< include _r_advanced.qmd >}}
-
-{{< include _r_resources.qmd >}}
-
-
+- Structure des projets:
+    - Auto-documentatoin dans la structure de projet
+    - Comprendre spéaration stoxckage code & données
 
 
-# Conclusion
+# :three: Retour d'expérience
 
-{{< include _conclusion.qmd >}}
+## Concernant `Git`
+
+- pas mal d'expérience de formation sur `git`, commence 
+à avoir du recul
+- aspect collaboratif plus compliqué mais pas nécessaire à tous
+
+## Concernant `R`
+
+- `renv` : beaucoup persuadés de l'intérêt
+- `targets` : 
