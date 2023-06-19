@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "index.html#contexte",
+    "href": "index.html#contexte",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Contexte",
+    "text": "Contexte\n\n\nL’INSEE se désengage de son patrimoine en SAS depuis plusieurs années\n\n\n\nVolonté institutionnelle d’utiliser Git  pour les projets statistiques\n\n\n\n\nBeaucoup de formations internes d’introduction à \n\n\n\n\n\n\n\n\nImportant\n\n\nUne transition réussie à R nécessite de se préoccuper de la qualité du code produit :\n\nBesoin de formations à tous les niveaux\nBesoin d’accompagnement"
+  },
+  {
+    "objectID": "index.html#enjeux",
+    "href": "index.html#enjeux",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Enjeux",
+    "text": "Enjeux\n\n\nFaible sensibilisation à la question de la qualité du code :\n\nlors de la formation initiale ;\nlors des formations d’initiation à  ou \n\n\n\n\nRisque de créer de la dette technique sans une transition contrôlée\n\n\n\n\nBesoins et niveaux très hétérogènes dans l’institut:\n\nTransition parfois difficile de SAS à R ;\nPas les mêmes besoins selon les niveaux hiérarchiques."
+  },
+  {
+    "objectID": "index.html#pourquoi-former-aux-bonnes-pratiques",
+    "href": "index.html#pourquoi-former-aux-bonnes-pratiques",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Pourquoi former aux bonnes pratiques ?",
+    "text": "Pourquoi former aux bonnes pratiques ?\n\n\nIl est utile de former aux bonnes pratiques:\n\nTemps investi faible par rapport à de l’apprentissage sur le tas ;\nPour des gains sensibles de qualité\n\n\n\n\nIl est utile de sensibiliser aux bonnes pratiques à tous les niveaux :\n\nEffets de mimétisme ;\nCommunauté interne utile pour debugger…"
+  },
+  {
+    "objectID": "index.html#un-point-daccès-centralisé",
+    "href": "index.html#un-point-daccès-centralisé",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Un point d’accès centralisé",
+    "text": "Un point d’accès centralisé\n\nTout est sur inseefrlab.github.io/formation-bonnes-pratiques-git-R"
+  },
+  {
+    "objectID": "index.html#sommaire",
+    "href": "index.html#sommaire",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Sommaire",
+    "text": "Sommaire\n\n1️⃣ Objectifs pédagogiques\n2️⃣ Contenu du parcours\n3️⃣ Retour d’expérience"
+  },
+  {
+    "objectID": "index.html#enjeux-12",
+    "href": "index.html#enjeux-12",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Enjeux (1/2)",
+    "text": "Enjeux (1/2)\n\n\nAbandonner la vision utilitariste du code:\n\nCode est un moyen de communication: le “code est plus souvent lu qu’écrit” (Guido Van Rossum)\n\n\n\n\nLa maintenance d’un code est très coûteuse\n\n\n\n\nTraitements statistiques se doivent d’être transparents et reproductibles\n\n\n\n\n\n\n\nDéfinition des bonnes pratiques\n\n\nUn ensemble de règles informelles, conventionnellement acceptées comme produisant des projets fiables, évolutifs et maintenables"
+  },
+  {
+    "objectID": "index.html#enjeux-22",
+    "href": "index.html#enjeux-22",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Enjeux (2/2)",
+    "text": "Enjeux (2/2)\n\n\nMais ⚠️ une reproductibilité parfaite est coûteuse\n\n\n\nGit est un standard atteignable et efficient\n\n\n\n\nUn socle minimal est attendu pour tout projet \n\nPuis un curseur à placer plus loin en fonction des projets\n\n\n\n\n\n\n\n\nNote\n\n\nPar exemple, on insiste plutôt sur la modularisation que la packagisation car le package n’est pas pertinent pour tout."
+  },
+  {
+    "objectID": "index.html#des-versions-différentes-selon-le-public",
+    "href": "index.html#des-versions-différentes-selon-le-public",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Des versions différentes selon le public",
+    "text": "Des versions différentes selon le public\n\nSocle minimal (1 jour de formation)\n\nGit\nQualité des scripts\nStructure des projets\n\nVersion approfondie (2 jours):\n\nSocle minimal\nEnvironnements reproductibles (renv)\nIntroduction aux pipelines (targets)\nInitiation à Quarto\n\nVersion manageurs (1/2 journée):\n\nPourquoi faire du contrôle de version et organiser le code par projets ?\nNormes minimales de sécurité"
+  },
+  {
+    "objectID": "index.html#approche-pédagogique",
+    "href": "index.html#approche-pédagogique",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Approche pédagogique",
+    "text": "Approche pédagogique\n\n\nUn exemple fil rouge pour les applications\n\nCas classique: on hérite d’un code avec de nombreuses mauvaises pratiques\n\n\n\n\nAmélioration graduelle de la qualité du projet\n\nAprès l’avoir rendu fonctionnel, on l’améliore progressivement\n\n\n\n\n\nExemple : exercice modularisation du projet\n\n\n\nDéplacer toutes les fonctions dans un fichier R/functions.R.\nDonner à la fonction fonction_de_stat_agregee un nom plus pertinent et des noms d’arguments plus transparents.\nDans script.R, appeler en début de chaîne ces fonctions avec source(\"R/functions.R\", encoding = \"UTF-8\").\nDocumenter la fonction principale au format attendu par roxygen2.\nAjouter les tests unitaires de la fonction comme exemples d’utilisation et les retirer de script.R.\nTester le bon fonctionnement de script.R."
+  },
+  {
+    "objectID": "index.html#exemple-suite",
+    "href": "index.html#exemple-suite",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Exemple (suite)",
+    "text": "Exemple (suite)\n\nUn système de checkpoint pour permettre à chacun d’aller à son rythme\n\n\n\n\n\nscript.R\nfunctions.R\nPackage R"
+  },
+  {
+    "objectID": "index.html#le-socle-minimal-formation-1-jour",
+    "href": "index.html#le-socle-minimal-formation-1-jour",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Le socle minimal (formation 1 jour)",
+    "text": "Le socle minimal (formation 1 jour)\n\nConcepts et pratique de Git & Gitlab sans l’aspect collaboratif\n\n\n\nQualité du script:\n\nNettoyer le code: linter et formaters\nPrivilégier l’autodocumentation du code\nModulariser son code avec des fonctions\n\n\n\n\n\nStructure des projets:\n\nAuto-documentation dans la structure de projet\nComprendre spéaration stoxckage code & données"
+  },
+  {
+    "objectID": "index.html#eléments-plus-avancés-formation-2-jours",
+    "href": "index.html#eléments-plus-avancés-formation-2-jours",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Eléments plus avancés (formation 2 jours)",
+    "text": "Eléments plus avancés (formation 2 jours)\n\n\nTravail collaboratif avec Git & Gitlab: branches, pull request…\n\n\n\nEnvironnements reproductibles: renv\n\n\n\n\nPipelines de données avec targets\n\n\n\n\nPublications reproductibles avec Quarto"
+  },
+  {
+    "objectID": "index.html#une-approche-complémentaire-pour-les-manageurs",
+    "href": "index.html#une-approche-complémentaire-pour-les-manageurs",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Une approche complémentaire pour les manageurs",
+    "text": "Une approche complémentaire pour les manageurs\n\n\nFormation pour sensibiliser les manageurs au sujet\n\n\n\nConseils sur l’utilisation de ces outils pour de la supervision\n\n\n\n\nConvaincre que cette exigeance est aussi nécessaire pour les manageurs"
+  },
+  {
+    "objectID": "index.html#concernant-git",
+    "href": "index.html#concernant-git",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Concernant Git",
+    "text": "Concernant Git\n\nBeaucoup de formations depuis 3 ans à Git:\n\nBonne communauté d’utilisateurs à l’INSEE pour aider\nRessources complémentaires depuis longtemps dans utilitR\n\n\n\n\nFormation massive à Git collaboratif viendra plus tard\n\nBesoin avant tout que tout le monde utilise systématiquement Git"
+  },
+  {
+    "objectID": "index.html#concernant-r",
+    "href": "index.html#concernant-r",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Concernant R",
+    "text": "Concernant R\n\nPragmatisme dans le programme choisi\n\n\n\nPriorité: comprendre la logique R différente de celle de SAS\n\n\n\n\nD’autres éléments (renv, targets…) sont plus de l’ordre de l’horizon vers lequel on veut converger\n\n\n\nRencontres R 2023"
+  }
+]
