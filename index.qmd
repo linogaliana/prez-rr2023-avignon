@@ -151,33 +151,16 @@ car le _package_ n'est pas pertinent pour tout.
 :::
 
 
-## Des versions différentes selon le public {.smaller}
-
-- __Socle minimal__ (1 jour de formation)
-    + Git
-    + Qualité des scripts
-    + Structure des projets
-
-- __Version approfondie__ (2 jours):
-    + Socle minimal
-    + Environnements reproductibles (`renv`)
-    + Introduction aux pipelines (`targets`)
-    + Initiation à `Quarto`
-
-- __Version manageurs__ (1/2 journée):
-    + Pourquoi faire du contrôle de version et organiser le code par projets ?
-    + Normes minimales de sécurité
-
 ## Approche pédagogique {.smaller}
 
 <br>
 
-- Un exemple fil rouge pour les applications
+- Un __[exemple fil rouge]{.orange}__ pour les applications
     + Cas classique: on hérite d'un code avec de nombreuses mauvaises pratiques
 
 . . .
 
-- Amélioration graduelle de la qualité du projet 
+- __[Amélioration graduelle]{.orange}__ de la qualité du projet 
     + Après l'avoir rendu fonctionnel, on l'améliore progressivement
 
 :::{.callout-tip collapse="true" icon=false}
@@ -211,6 +194,22 @@ car le _package_ n'est pas pertinent pour tout.
 
 # :two: Contenu du parcours
 
+## Des versions différentes selon le public {.smaller}
+
+- __Socle minimal__ (1 jour de formation)
+
+. . .
+
+- __Version approfondie__ (2 jours):
+
+. . .
+
+- __Version manageurs__ (1/2 journée):
+
+. . .
+
+- A venir: Sensibilisation pour débutants en `R` (1 heure)
+
 ## Le socle minimal (formation 1 jour) {.smaller}
 
 - [Concepts]{.blue2} et [pratique]{.blue2} de __[Git & Gitlab]{.orange}__ sans l'aspect
@@ -227,7 +226,7 @@ collaboratif
 
 - __[Structure des projets]{.orange}__:
     - Auto-documentation dans la structure de projet
-    - Comprendre spéaration stoxckage code & données
+    - Comprendre enjeux séparation stockage du code & des données
 
 
 ## Eléments plus avancés (formation 2 jours) {.smaller}
