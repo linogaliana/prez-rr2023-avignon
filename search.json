@@ -49,13 +49,6 @@
     "text": "Enjeux (2/2)\n\n\nMais ⚠️ une reproductibilité parfaite est coûteuse\n\n\n\nGit est un standard atteignable et efficient\n\n\n\n\nUn socle minimal est attendu pour tout projet \n\nPuis un curseur à placer plus loin en fonction des projets\n\n\n\n\n\n\n\n\nNote\n\n\nPar exemple, on insiste plutôt sur la modularisation que la packagisation car le package n’est pas pertinent pour tout."
   },
   {
-    "objectID": "index.html#des-versions-différentes-selon-le-public",
-    "href": "index.html#des-versions-différentes-selon-le-public",
-    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
-    "section": "Des versions différentes selon le public",
-    "text": "Des versions différentes selon le public\n\nSocle minimal (1 jour de formation)\n\nGit\nQualité des scripts\nStructure des projets\n\nVersion approfondie (2 jours):\n\nSocle minimal\nEnvironnements reproductibles (renv)\nIntroduction aux pipelines (targets)\nInitiation à Quarto\n\nVersion manageurs (1/2 journée):\n\nPourquoi faire du contrôle de version et organiser le code par projets ?\nNormes minimales de sécurité"
-  },
-  {
     "objectID": "index.html#approche-pédagogique",
     "href": "index.html#approche-pédagogique",
     "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
@@ -70,11 +63,18 @@
     "text": "Exemple (suite)\n\nUn système de checkpoint pour permettre à chacun d’aller à son rythme\n\n\n\n\n\nscript.R\nfunctions.R\nPackage R"
   },
   {
+    "objectID": "index.html#des-versions-différentes-selon-le-public",
+    "href": "index.html#des-versions-différentes-selon-le-public",
+    "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
+    "section": "Des versions différentes selon le public",
+    "text": "Des versions différentes selon le public\n\nSocle minimal (1 jour de formation)\n\n\n\nVersion approfondie (2 jours):\n\n\n\n\nVersion manageurs (1/2 journée):\n\n\n\n\nA venir: Sensibilisation pour débutants en R (1 heure)"
+  },
+  {
     "objectID": "index.html#le-socle-minimal-formation-1-jour",
     "href": "index.html#le-socle-minimal-formation-1-jour",
     "title": "Diffuser la culture de la reproductibilité par une formation aux bonnes pratiques",
     "section": "Le socle minimal (formation 1 jour)",
-    "text": "Le socle minimal (formation 1 jour)\n\nConcepts et pratique de Git & Gitlab sans l’aspect collaboratif\n\n\n\nQualité du script:\n\nNettoyer le code: linter et formaters\nPrivilégier l’autodocumentation du code\nModulariser son code avec des fonctions\n\n\n\n\n\nStructure des projets:\n\nAuto-documentation dans la structure de projet\nComprendre spéaration stoxckage code & données"
+    "text": "Le socle minimal (formation 1 jour)\n\nConcepts et pratique de Git & Gitlab sans l’aspect collaboratif\n\n\n\nQualité du script:\n\nNettoyer le code: linter et formaters\nPrivilégier l’autodocumentation du code\nModulariser son code avec des fonctions\n\n\n\n\n\nStructure des projets:\n\nAuto-documentation dans la structure de projet\nComprendre enjeux séparation stockage du code & des données"
   },
   {
     "objectID": "index.html#eléments-plus-avancés-formation-2-jours",
