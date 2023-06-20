@@ -1,3 +1,3 @@
-# Bonnes pratiques pour les projets statistiques avec Git et R
+# Présentation Rencontres R 2023 Avignon
 
-Ce dépôt contient les supports de la formation "Bonnes pratiques pour les projets statistiques avec Git et R" donnée à l'Insee et dans le SSP. Les supports de formation sont déployés sur un [site dédié](https://inseefrlab.github.io/formation-bonnes-pratiques-git-R/).
+https://linogaliana.github.io/prez-rr2023-avignon/#/title-slide
